@@ -27,26 +27,31 @@ int main(int argc, const char** argv){
 	          " must be positive.\n", lowerBound, upperBound);
         return -2;
     }
-
+	// This is my portion of the code ______________________
     int isItPrime;
-
+	
+	//Making it so it doesnt count 1 as prime number
     if(lowerBound < 2){
 
         lowerBound++;
     }
+	//Find all prime numbers within Bounds
     for(int i = lowerBound ; i <= upperBound; i++){
-
+	
+	    //Making it assume the first number is a prime number
         isItPrime = 1;
-
+	    
+	// Seeing if the current number is a prime
         for(int j = 2; j<= i/2; j++){
-
+	
             if(i%j == 0){
                 isItPrime = 0;
                 break;
             }
         }
+	    //If the number is prime -> Print it
         if(isItPrime == 1){
-            printf("%d,\n ", i);
+            printf("%d\n ", i);
         }
     }    
     return 0;
