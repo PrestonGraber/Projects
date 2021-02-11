@@ -198,9 +198,6 @@ void init(void)
         board[i][j] = d * d - Decend;
 
         Decend++;
-        if( i == 80){
-            printf("Congratz youre at the end.")
-        }
 
         }
     }
