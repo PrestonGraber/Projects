@@ -46,7 +46,7 @@ int main(int argc, const char** argv){
             }
         }
         if(isItPrime == 1){
-            printf("%d,\n ", i);
+            printf("%d\n ", i);
         }
     }    
     return 0;
