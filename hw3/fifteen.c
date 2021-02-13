@@ -12,7 +12,7 @@
  * where d must be in [DIM_MIN,DIM_MAX]
  *
  * Note that usleep is obsolete, but it offers more granularity than
- * sleep and is simpler to use than nanosleep; `man usleep` for more.
+ * sleep and is simpler to use than nanosleep; `man usleep`.
  */
 
 #define _XOPEN_SOURCE 500
