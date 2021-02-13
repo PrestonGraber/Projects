@@ -77,6 +77,7 @@ int main(int argc, char* argv[])
     // accept moves until game is won
     while (1)
     {
+       
         // draw the current state of the board
         draw();
 
@@ -95,7 +96,7 @@ int main(int argc, char* argv[])
         }
         fflush(file);
 
-        // check for win
+         // check for win
         if (won())
         {
             printf("ftw!\n");
@@ -125,7 +126,7 @@ int main(int argc, char* argv[])
         }
 
         // sleep thread for animation's sake
-        usleep(200000);
+        usleep(150000);
     }
 
     // close log
@@ -186,29 +187,20 @@ void init(void)
 {
     // TODO:initialize the board
     
-    // Function makes tiles in decending order
-    //Making a counter and filling in the array
-   int Decend = 1;
+   int c = 1;
     for (int i = 0; i < d; i++)
     {
         for (int j = 0; j < d; j++)
         {
-        //In for loop makes tiles in decending order
-
-        board[i][j] = d * d - Decend;
-
-        Decend++;
-        if( i == 80){
-            printf("Congratz youre at the end.")
-        }
-
+        // fill the tiles in descending order
+        board[i][j] = d * d - c;
+        c++;
         }
     }
     board[d-1][d-1] = 80;
     if ((d * d)%2 == 0)
     {
         board[d-1][d-2] = 2;
-
         board[d-1][d-3] = 1;
     }
 }
@@ -217,24 +209,23 @@ void init(void)
 /**
  * Prints the board in its current state.
  */
-void draw(void){
-
-    for (int i = 0; i < d; i++){
-    
-        for (int j = 0; j < d; j++){
-        
-            //the fuction will print the blank tile(last tile)
+void draw(void)
+{
+    for (int i = 0; i < d; i++)
+    {
+        for (int j = 0; j < d; j++)
+        { 
+            //the fuction will print the blank tile
             if (board[i][j] == 80){
             
                 printf("    _");
             }
             else{
             
-            // it prints the board
-                printf("%5i ",  board[i][j]);
+            //this makes it in descending order
+                printf("%5i ", board[i][j]);
             }
         }
-        
         printf("\n");
     }
 }
@@ -244,56 +235,47 @@ void draw(void){
  * If tile borders empty space, moves tile and returns 1, else
  * returns 0.
  */
-short move(int tile){
+short move(int tile)
+{
 
-//notes: gotta check for up/down/right/left if its blank move/return 1 gotta use for loop for i and J set it equal to same as Init
-    for (int i = 0; i < d; i++){
-    
-        for (int j = 0; j < d; j++){
-        
-            if (board[i][j] == tile){
-            
-                    // this will check if the blank is right
-                if (j+1 <= d-1 && board[i][j+1] == 80){
-                
-                    // this Moves "tile" to the right
+// establish algorithm for checking bordering tiles
+    for (int i = 0; i < d; i++)
+    {
+        for (int j = 0; j < d; j++)
+        {
+            if (board[i][j] == tile)
+            {
+                //check if the blank is to the right
+                if (j+1 <= d-1 && board[i][j+1] == 80)
+                {
                     board[i][j+1] = tile;
-                    //Makes previous tile "  _"
                     board[i][j] = 80;
-                    //Returns 1 which makes while loop run again
                     return 1;
                 }
-                    //this will check if the blank is left
-                else if (j-1 >= 0 && board[i][j-1] == 80){
-                    
-                    //Moves left
+                // check if the blank is to the left
+                else if (j-1 >= 0 && board[i][j-1] == 80)
+                {
                     board[i][j-1] = tile;
-
                     board[i][j] = 80;
-
-                return 1;
+                    return 1;
                 }
-                
-                    //this will check if blank is below
-                else if (i+1 <= d-1 && board[i+1][j] == 80){
-                
-                    board[i+1][j] = tile;
-                    board[i][j] = 80;
-
-                return 1;
-                }
-                     //this will check if blank is above
-                else if (i-1 >= 0 && board[i-1][j] == 80){
-               
+                // check if the blank is above
+                else if (i-1 >= 0 && board[i-1][j] == 80)
+                {
                     board[i-1][j] = tile;
                     board[i][j] = 80;
-
-                return 1;
+                    return 1;
+                }
+                // check if the blank is below
+                else if (i+1 <= d-1 && board[i+1][j] == 80)
+                {
+                    board[i+1][j] = tile;
+                    board[i][j] = 80;
+                    return 1;
                 }
             }
         }
     }
-    
     return 0;
 }
 
@@ -301,11 +283,10 @@ short move(int tile){
  * Returns 1 if game is won (i.e., board is in winning configuration),
  * else 0.
  */
-short won(void){
-
-    int Cnt = 1;
-
-    //This fuction checks last tile to see if blank if not return 0
+short won(void)
+{
+    int n = 1;
+    //fuction checks last tile to see if blank if not return 0
     if (board[d-1][d-1] != 80){
 
         return 0;
@@ -313,15 +294,19 @@ short won(void){
     }
 
     for (int i = 0; i < d; i++){
+
     
-
-        for (int j = 0; j < d; j++){    
-
-            // Having it check last grid positon if it is blank it will return a 1
-            if (i == d - 1 && j == d - 1){
+        for (int j = 0; j < d; j++)
+        {
+             if (i == d - 1 && j == d - 1){
                 return 1;
             } 
-                     
+            // function checks for empty tiles then returns 0
+            if (n != board[i][j]){
+
+                return 0;
+                n++;
+            }                      
         }
     }
     return 0;
