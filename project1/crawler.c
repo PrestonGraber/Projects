@@ -190,6 +190,7 @@ void destroyList(struct listNode *pNode){
 
        pNode = pNode->next;   
         //Frees first node.
+        
        free(temp);       
     }
 }
