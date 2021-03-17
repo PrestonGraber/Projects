@@ -1,0 +1,38 @@
+seed = 899
+Cycle detected on hop 3: address https://users.pfw.edu/chenz/testWeb/page_000003.html
+Dead end on hop 5: no outgoing links
+https://users.pfw.edu/chenz/testweb/page_000001.html
+https://users.pfw.edu/chenz/testWeb/page_000011.html
+https://users.pfw.edu/chenz/testWeb/page_000003.html
+https://users.pfw.edu/chenz/testWeb/page_000010.html
+https://users.pfw.edu/chenz/testWeb/page_000005.html
+seed = 983
+Dead end on hop 5: no outgoing links
+https://users.pfw.edu/chenz/testweb/page_000010.html
+https://users.pfw.edu/chenz/testWeb/page_000021.html
+https://users.pfw.edu/chenz/testWeb/page_000004.html
+https://users.pfw.edu/chenz/testWeb/page_000028.html
+https://users.pfw.edu/chenz/testWeb/page_000000.html
+seed = 187
+Cycle detected on hop 2: address https://users.pfw.edu/chenz/testWeb/page_000028.html
+https://users.pfw.edu/chenz/testweb/page_000003.html
+https://users.pfw.edu/chenz/testWeb/page_000028.html
+https://users.pfw.edu/chenz/testWeb/page_000013.html
+https://users.pfw.edu/chenz/testWeb/page_000004.html
+https://users.pfw.edu/chenz/testWeb/page_000002.html
+seed = 1550698386
+Cycle detected on hop 2: address https://users.pfw.edu/chenz/testWeb/page_000019.html
+Dead end on hop 6: no outgoing links
+https://users.pfw.edu/chenz/testweb/page_000003.html
+https://users.pfw.edu/chenz/testWeb/page_000019.html
+https://users.pfw.edu/chenz/testWeb/page_000025.html
+https://users.pfw.edu/chenz/testWeb/page_000018.html
+https://users.pfw.edu/chenz/testWeb/page_000004.html
+https://users.pfw.edu/chenz/testWeb/page_000002.html
+seed = 1550698622
+https://users.pfw.edu/chenz/testweb/page_000008.html
+https://users.pfw.edu/chenz/testWeb/page_000004.html
+https://users.pfw.edu/chenz/testWeb/page_000025.html
+https://users.pfw.edu/chenz/testWeb/page_000017.html
+https://users.pfw.edu/chenz/testWeb/page_000011.html
+https://users.pfw.edu/chenz/testWeb/page_000028.html
