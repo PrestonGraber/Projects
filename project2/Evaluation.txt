@@ -1,0 +1,6 @@
+Collin and I met up in person on two occasions and discussed the structure of the algorithim the first time and
+procceded to work on the algorithm on the second meet up. We continued to contact eachother VIA online.
+I constructed the free trie memory function and printTrie contents function. 
+I originally made the addwordoccurance function, but collin was the one the reconstructed the function and made it work, so he 
+deserves more credit on that function.
+Collin continued to make the index page function and finished the main() function.
