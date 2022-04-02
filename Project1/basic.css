@@ -1,0 +1,163 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url("background.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 25px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px solid #009688;
+}
+.logo{
+    width: 60px;
+    height: 60px;
+    border: 4px inset #009688;
+    
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    margin: 1px 1px;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    right: 0;
+    bottom: -5px;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+
+}
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+}
+.content h1{
+    font-size: 50px;
+    margin-top: 80px;
+}
+.content p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+    
+}
+button:hover{
+    background-color: #009688;
+}
+.footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 40px;
+    border-top: 2px solid #009688;
+    margin-top: 100px;
+}
+.footer p{
+    padding-top: 10px;
+}
+
+.bannerVolcano{
+    width: 100%;
+    height: 25%;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url("background.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+.Volcanos{
+    width: 100%;
+    height:max-content;
+    position: relative;
+    text-align: center;
+    background-color:floralwhite;
+    line-height: 30px;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding-top: 5px;
+}
+.Volcanos h1{
+    color: #009688;
+    font-weight: 700;
+    border-bottom: 2px dotted black;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+
+}
+.Volcanos h3{
+    color: #009688;
+    font-weight: 700;
+    border-bottom: 2px dotted black;
+    padding: 10px;
+    margin: 10px;
+    text-align: left;
+}
+#volcanoImg{
+    padding: 10px;
+    margin: 5px;
+    width: 250px;
+    height: 250px;
+    border: 2px dotted #009688;
+    border-radius: 5px;
+
+   
+}
+footer{
+    background-color: black;
+    padding-top: 10px;
+    width: 100%;
+    height: 30px;
+    color: white;
+    border-top: 2px solid #009688;
+    text-align: center;
+}
